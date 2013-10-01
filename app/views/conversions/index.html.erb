@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Converter</title>
-		<script type="text/javascript" src="./js/jquery-2.0.3.js"></script>
-		<script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.js"></script>
-		<script src="./js/calc.js"></script>
-		<script src="./js/random.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/calc.css" />
-		<link rel="stylesheet" type="text/css" href="./css/ui-lightness/jquery-ui-1.10.3.custom.css" />
-	</head>
-<body>
 
-<div id="titlebar">
-	<h1>Converter</h1>
-</div>
+
 
 
 
 <div id="container">
+
+	<div id="titlebar">
+		<h1>Converter</h1>
+	</div>
 
 	<!-- SIDEBAR LINKS -->
 
@@ -32,11 +22,6 @@
 		</ul>
 	</div>
 
-	<!-- SITE DESCRIPTION -->
-
-	<div id="info">
-		<p>Use the left panel to select which measurements you are interested in converting and use the select lists below to enter hte units of measurement you wish to modify. </p>
-	</div>
 
 	<!-- DISTANCE CONVERTER -->
 
@@ -250,7 +235,7 @@
 
 	<div id="facts">
 		<div id="imagemain">
-			<img src="./images/tape_measure.gif" alt="tape_measure" height="175" width="175">
+			<%= image_tag "tape_measure.gif", size: "175x175", alt: "Tape measure" %>
 		</div>
 			<h1>Random convertion facts<input type="button" value="click" class="small"></h1>
 		<div id="inside">
@@ -266,12 +251,9 @@
 				<div id="7" style="display: none;">Cubit: In ancient Egypt, a cubit was the distance from the elbow to the fingertips. Today a cubit is about 18 inches.</div>
 			</div>
 			<div id="rule">
-				<img src="./images/rule.gif" alt="ruler" height="30" width="560">
+				<%= image_tag "rule.gif", size: "560x30", alt: "ruler" %>
 			</div>
 		</div>
 	</div>
 
 </div>
-
-</body>	
-</html>
