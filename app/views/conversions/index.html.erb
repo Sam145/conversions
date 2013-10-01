@@ -1,2 +1,277 @@
-<h1>Conversions#index</h1>
-<p>Find me in app/views/conversions/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Converter</title>
+		<script type="text/javascript" src="./js/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.js"></script>
+		<script src="./js/calc.js"></script>
+		<script src="./js/random.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/calc.css" />
+		<link rel="stylesheet" type="text/css" href="./css/ui-lightness/jquery-ui-1.10.3.custom.css" />
+	</head>
+<body>
+
+<div id="titlebar">
+	<h1>Converter</h1>
+</div>
+
+
+
+<div id="container">
+
+	<!-- SIDEBAR LINKS -->
+
+	<div id="sidemenu">
+		<h1>Conversions</h1>
+		<ul id="list">
+			<li class="link distancetag">Distance</li>
+			<li class="link weighttag">Weight</li>
+			<li class="link volumetag">Volume</li>
+			<li class="link timetag">Time</li>
+			<li class="link speedtag">Speed</li>
+		</ul>
+	</div>
+
+	<!-- SITE DESCRIPTION -->
+
+	<div id="info">
+		<p>Use the left panel to select which measurements you are interested in converting and use the select lists below to enter hte units of measurement you wish to modify. </p>
+	</div>
+
+	<!-- DISTANCE CONVERTER -->
+
+	<div class="converter distance">
+		<h1>Distance Converter</h1>
+		<div class="center">
+			<table class="table" id="distance">
+				<tr>
+					<td><span id="to"> FROM </span></td>	
+					<td>
+						<select class="dropdown sel1">
+						  <option value="0">Inches</option>
+						  <option value="1">Feet</option>
+						  <option value="2">Yards</option>
+						  <option value="3">Mile</option>
+						  <option value="4">Millimetres</option>
+						  <option value="5">Centimetres</option>
+						  <option value="6">Metre</option>
+						  <option value="7">kilometre</option>
+						</select>
+					</td>
+						<td><input type="text" name="bob" class="field field1"></td>
+				</tr>
+				<tr>
+						<td><span id="to"> TO </span></td>					
+					<td>
+						<select class="dropdown sel2">
+						  <option value="0">Inches</option>
+						  <option value="1">Feet</option>
+						  <option value="2">Yards</option>
+						  <option value="3">Mile</option>
+						  <option value="4">Millimetres</option>
+						  <option value="5">Centimetres</option>
+						  <option value="6">Metre</option>
+						  <option value="7">kilometre</option>
+						</select>
+					</td>
+					<td><input type="text" name="bab" class="field field2" disabled></td>
+					<td><input type="button" value="Calculate" class="btn"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!-- WEIGHT CONVERTER -->
+
+	<div class="converter weight" style="display: none;">
+		<h1>Weight Converter</h1>
+		<div class="center">
+			<table class="table" id="weight">
+				<tr>
+					<td><span id="to"> FROM </span></td>
+					<td>
+						<select class="dropdown sel1">
+						  <option value="0">Kilogram</option>
+						  <option value="1">Gram</option>
+						  <option value="2">Milligram</option>
+						  <option value="3">Ounce</option>
+						  <option value="4">Pound</option>
+						  <option value="5">Stone</option>
+						  <option value="6">Ton</option>
+						</select>
+					</td>
+						<td><input type="text" name="bob" class="field field1"></td>
+				</tr>
+				<tr>
+						<td><span id="to"> TO </span></td>					
+					<td>
+						<select class="dropdown sel2">
+						  <option value="0">Kilogram</option>
+						  <option value="1">Gram</option>
+						  <option value="2">Milligram</option>
+						  <option value="3">Ounce</option>
+						  <option value="4">Pound</option>
+						  <option value="5">Stone</option>
+						  <option value="6">Ton</option>
+						</select>
+					</td>
+						<td><input type="text" name="bab" class="field field2" disabled></td>
+					<td><input type="button" value="Calculate" class="btn"></td>
+			</table>
+		</div>
+	</div>
+
+	<!-- VOLUME CONVERTER -->
+
+	<div class="converter volume" style="display: none;">
+		<h1>Volume Converter</h1>
+		<div class="center">
+			<table class="table" id="volume">
+				<tr>
+					<td><span id="to"> FROM </span></td>
+					<td>
+						<select class="dropdown sel1">
+						  <option value="0">Millilitre</option>
+						  <option value="1">Litre</option>
+						  <option value="2">Cubic millimetre</option>
+						  <option value="3">Cubic centimetre</option>
+						  <option value="4">Cubic metre</option>
+						  <option value="5">Cubic kilometre</option>
+						  <option value="6">Cubic inch</option>
+						  <option value="7">Cubic foot</option>
+						  <option value="8">Cubic yard</option>
+						  <option value="9">Cubic mile</option>
+						</select>
+					</td>
+						<td><input type="text" name="bob" class="field field1"></td>
+				</tr>
+				<tr>
+						<td><span id="to"> TO </span></td>					
+					<td>
+						<select class="dropdown sel2">
+						  <option value="0">Millilitre</option>
+						  <option value="1">Litre</option>
+						  <option value="2">Cubic millimetre</option>
+						  <option value="3">Cubic centimetre</option>
+						  <option value="4">Cubic metre</option>
+						  <option value="5">Cubic kilometre</option>
+						  <option value="6">Cubic inch</option>
+						  <option value="7">Cubic foot</option>
+						  <option value="8">Cubic yard</option>
+						  <option value="9">Cubic mile</option>
+						</select>
+					</td>
+						<td><input type="text" name="bab" class="field field2" disabled></td>
+					<td><input type="button" value="Calculate" class="btn"></td>
+			</table>
+		</div>
+	</div>
+
+	<!-- TIME CONVERTER -->
+
+	<div class="converter time" style="display: none;">
+		<h1>Time Converter</h1>
+		<div class="center">
+			<table class="table" id="time">
+				<tr>
+					<td><span id="to"> FROM </span></td>
+					<td>
+						<select class="dropdown sel1">
+						  <option value="0">Milliseconds</option>
+						  <option value="1">Seconds</option>
+						  <option value="2">Minutes</option>
+						  <option value="3">Hours</option>
+						  <option value="4">Days</option>
+						  <option value="5">Weeks</option>
+						  <option value="6">Fortnight</option>
+						</select>
+					</td>
+						<td><input type="text" name="bob" class="field field1"></td>
+				</tr>
+				<tr>		
+						<td><span id="to"> TO </span></td>					
+					<td>
+						<select class="dropdown sel2">
+						  <option value="0">Milliseconds</option>
+						  <option value="1">Seconds</option>
+						  <option value="2">Minutes</option>
+						  <option value="3">Hours</option>
+						  <option value="4">Days</option>
+						  <option value="5">Weeks</option>
+						  <option value="6">Fortnight</option>
+						</select>
+					</td>
+						<td><input type="text" name="bab" class="field field2" disabled></td>
+					<td><input type="button" value="Calculate" class="btn"></td>
+			</table>
+		</div>
+	</div>
+
+	<!-- SPEED CONVERTER -->
+
+	<div class="converter speed" style="display: none;">
+		<h1>Speed Converter</h1>
+		<div class="center">
+			<table class="table" id="speed">
+				<tr>
+					<td><span id="to"> FROM </span></td>
+					<td>
+						<select class="dropdown sel1">
+						  <option value="0">Metres per Second</option>
+						  <option value="1">Kilometres per Hour</option>
+						  <option value="2">Feet per Second</option>
+						  <option value="3">Miles per Hour</option>
+						  <option value="4">Miles per Second</option>
+						  <option value="5">Speed of light (Vacuum)</option>
+						</select>
+					</td>
+						<td><input type="text" name="bob" class="field field1"></td>
+				</tr>
+				<tr>		
+						<td><span id="to"> TO </span></td>					
+					<td>
+						<select class="dropdown sel2">
+						  <option value="0">Metres per Second</option>
+						  <option value="1">Kilometres per Hour</option>
+						  <option value="2">Feet per Second</option>
+						  <option value="3">Miles per Hour</option>
+						  <option value="4">Miles per Second</option>
+						  <option value="5">Speed of light (Vacuum)</option>
+						</select>
+					</td>
+						<td><input type="text" name="bab" class="field field2" disabled></td>
+					<td><input type="button" value="Calculate" class="btn"></td>
+			</table>
+		</div>
+	</div>
+
+
+	<!-- RANDOM CONVERTION FACTS -->
+
+	<div id="facts">
+		<div id="imagemain">
+			<img src="./images/tape_measure.gif" alt="tape_measure" height="175" width="175">
+		</div>
+			<h1>Random convertion facts<input type="button" value="click" class="small"></h1>
+		<div id="inside">
+			
+			<div id="info">
+				<div id="1">Inch: At first an inch was the width of a man's thumb. In the 14th century, King Edward II of England ruled that 1 inch equalled 3 grains of barley placed end to end lengthwise.</div>
+				<div id="2" style="display: none;">Hand: A hand was approximately 5 inches or 5 digits (fingers) across. Today, a hand is 4 inches and is used to measure horses (from the ground to the horse's withers, or shoulder).</div>
+				<div id="3" style="display: none;">A 'jiffy' is an actual unit of time for 1/100th of a second.</div>
+				<div id="4" style="display: none;">If the sun stopped shining suddenly, it would take eight minutes for people on earth to be aware of the fact.</div>
+				<div id="5" style="display: none;">ADD FACT HERE
+				</div>
+				<div id="6" style="display: none;">Pace: The ancient Roman soldiers marched in paces, which were the length of a double step, about 5 feet; 1,000 paces was a mile. Today, a pace is the length of one step, 21/2 to 3 feet.</div>
+				<div id="7" style="display: none;">Cubit: In ancient Egypt, a cubit was the distance from the elbow to the fingertips. Today a cubit is about 18 inches.</div>
+			</div>
+			<div id="rule">
+				<img src="./images/rule.gif" alt="ruler" height="30" width="560">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>	
+</html>

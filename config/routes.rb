@@ -1,4 +1,7 @@
 Conversions::Application.routes.draw do
+
+  root to: 'conversions#index'
+  
   get "conversions/index"
 
   # The priority is based upon order of creation:
