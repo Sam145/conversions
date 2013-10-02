@@ -9,7 +9,7 @@ html * {
 body{
 	width: 1024px;
 	margin: 0 auto;
-	background: black;
+	background: #CCC;
 }
 
 /* top bar */
@@ -89,9 +89,13 @@ position: fixed;
 	top: 120px;
 	left: 230px;
 	border-radius: 10px;
-	min-width: 550px;
+	width: 600px;
 	height: 150px;
 	box-shadow: 5px 5px 10px black;
+}
+
+.wider {
+	min-width: 650px;
 }
 
 .converter h1 {
